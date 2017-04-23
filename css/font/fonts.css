@@ -1,0 +1,25 @@
+/*
+ ####################################
+        Musicografi FONT
+ ####################################
+ */
+
+@font-face {
+    font-family: Musicografi;
+    src: url('Musicografi.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+/*
+ ####################################
+        The Tribal Box FFPFONT
+ ####################################
+ */
+
+@font-face {
+    font-family: tribal;
+    src: url('The_Tribal_Box_demo-font-FFP.ttf');
+    font-style: normal;
+    font-weight: normal;
+}
