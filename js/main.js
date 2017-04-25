@@ -2,6 +2,11 @@ $(".skewSection.withBanner").backstretch([
 	  "img/MusicWallpaperArtWallpapersPicshd.jpg",
   ], {duration: 3000, fade: 750});
 
+$(".upLoad").backstretch([
+	  "img/mm.jpg",
+  ], {duration: 3000, fade: 750});
+
+
 $('.artistInfoBtn').click(function(){
 	$('.artistInfo').fadeOut();
 	$('.artistInfo').hide();
