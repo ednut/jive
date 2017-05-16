@@ -40,95 +40,111 @@
                             <li><a href="upload.html"> Upload </a></li>
                             <li><a href="ranking.html"> Ranking </a></li>
                             <li><a href="faq.html"> FAQ </a></li>
+                            <li class="search">
+                                <div class="searchWrap clearfix">
+                                    <input type="text">
+                                    <div class="icon">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
         </header>
 
-        <div class="uploadPage" style="background-image: url('img/JiveHome.jpg');">
-            <div class="overlay">
-                <div class="col-md-6 p-0">
-                    <div class="formSec">
-                        <div class="dForm artistInfo">
-                            <div class="col-md-12">
-                                <div class="title">ARTISTE INFO</div>
-                                <div class="caption">Provide song and artiste info below</div>
-                            </div>
-                            <form action="">
-                                <div class="col-md-12">
-                                    <input type="text" placeholder="Artist Name">
-                                </div>
-                                <div class="col-md-12">
-                                    <select>
-                                        <option value="">Network</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-12">
-                                    <input type="text" placeholder="Phone Number">
-                                </div>
-                                <div class="col-md-12">
-                                    <select>
-                                        <option value="">Location</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-12">
-                                    <textarea name="" id="" cols="30" rows="10" placeholder="Artiste Profile"></textarea>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="artistInfoBtn">Continue</div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="dForm songInfoBtn">
-                            <div class="col-md-12">
-                                <div class="title">SONG INFO</div>
-                                <div class="caption">Provide song and artiste info below</div>
-                            </div>
-                            <form action="">
-                                <div class="col-md-12">
-                                    <input type="text" placeholder="Song Name">
-                                </div>
-                                <div class="col-md-12">
-                                    <input type="text" placeholder="Song Title">
-                                </div>
-                                <div class="col-md-12">
-                                    <select>
-                                        <option value="">Genre</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Upload Song Art</label>
-                                    <input type="file">
-                                </div>
-                                <div class="form-group">
-                                    <label>Upload Song</label>
-                                    <input type="file">
-                                </div>
+        <div class="uploadPage clearfix container">
+           <div class="col-md-1"></div>
+           <div class="col-md-6">
+               <div class="formSec">
+                   <form class="form-horizontal musicForm">
 
-                                <div class="checkbox">
-                                    <label>
-                                      <input type="checkbox"> I agree to the <a href="">TERMS & CONDITIONS</a>
-                                    </label>
-                                </div>
-                                <div class="col-md-12 clearfix">
-                                    <div class="songInfoBtn pull-left">Back</div>
-                                    <button class="artistInfoBtn pull-right">Submit</button>
-                                </div>
-                            </form>
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label">Artist Name</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" placeholder="Artist Name">
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-6 p-0">
-                    <div class="infoSec" style="background-image: url('img/Capture4.PNG');">
-                    </div>
-                    <div class="text">
-                        <div>Empower</div>
-                        <div>Your</div>
-                        <div>Sound</div>
-                    </div>
-                </div>
-            </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label">Stage Name</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" placeholder="Stage Name">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label">Song Title</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" placeholder="Song Title">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label">Album Art</label>
+                        <div class="col-sm-10">
+                            <input type="file" class="form-control">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label"> Genre</label>
+                        <div class="col-sm-10">
+                            <select class="form-control"></select>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label">Description</label>
+                        <div class="col-sm-10">
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label">Network</label>
+                        <div class="col-sm-10">
+                            <select class="form-control"></select>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="col-sm-2 control-label">Location</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" placeholder="Song Title">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                          <div class="checkbox">
+                            <label>
+                              <input class="terms" type="checkbox"> I accept the terms and conditions
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                          <button type="submit" class="btn btn-danger pull-right subBtn">Submit</button>
+                        </div>
+                      </div>
+                    </form>
+               </div>
+           </div>
+           <div class="col-md-1"></div>
+           <div class="col-md-4">
+               <div class="adsSec">
+                   <div class="ads">
+                       <img src="img/mtn1.png" alt="">
+                   </div>
+                   <div class="ads">
+                       <img src="img/add1.png" alt="">
+                   </div>
+               </div>
+           </div>
+           
         </div>
 
 

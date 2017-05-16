@@ -15,13 +15,14 @@ body{
 	margin-bottom: 15px
 }
 header{
-	height: 4em;
+	height: auto;
 	line-height: 4em;
-	position: absolute;
 	left: 0;
 	right: 0;
 	top: 0;
 	z-index: 1;
+	background-color: #fbfbfb;
+	border-bottom: 1px solid #ccc;
 	ul.linkWrap{
 		margin: 0;
 		padding: 0;
@@ -31,7 +32,7 @@ header{
 			padding: 10px 25px;
 			a{
 				display: inline-block;
-				color: #fff;
+				color: #333;
 				text-decoration: none;
 				font-size: 17px;
 				font-weight: 600;
@@ -46,11 +47,39 @@ header{
 			  		transition: all 0.3s;
 				}
 			}
+			&.search{
+				vertical-align: middle;
+				.searchWrap{
+					background: #C1BFC1;
+					width: 200px;
+					height: 2em;
+					padding: 0 10px;
+					input{
+						height: 2em;
+						width: 80%;
+					    background: #C1BFC1;
+					    border: none;
+					    color: #333;
+					    float: left;
+					    &:focus{
+					    	outline: none;
+					    }
+					}
+					.icon{
+						width: 18%;
+						color: #333;
+						float: right;
+						height: 2em;
+						text-align: right;
+    					line-height: 2em;
+					}
+				}
+			}
 		}
 	}
 	.logo{
 		img{
-			width: 50%;
+			width: 46%;
 		}
 	}
 }
@@ -69,6 +98,36 @@ header{
 			background-size: cover;
 			width: 100%;
 			height: 50em;
+			position: relative;
+			.captionImg{
+				position: absolute;
+			    top: 8em;
+			    left: 50px;
+				img{
+
+				}
+			}
+			.bannerCaption{
+				position: absolute;
+			    top: 14.2em;
+			    left: 3.5em;
+			    color: #fff;
+			    font-size: 26px;
+			}
+			.uploadSong{
+				display: inline-block;
+			    background-color: #C70400;
+			    border: 1px solid #999;
+			    color: #fff;
+			    position: absolute;
+			    top: 22em;
+			    left: 5em;
+			    padding: 10px 77px;
+			    font-size: 20px;
+			    font-weight: 600;
+			    border-radius: 30px;
+			    text-decoration: none;
+			}
 		}
 		.infoBannerIndicator{
 			position: absolute;
@@ -258,12 +317,24 @@ header{
 	.featuredSongs{
 		min-height: 10em;
 		margin-top: 10px;
+		.featuredSongLink{
+			background-color: #111;
+			color: #fff;
+			height: 4em;
+			text-align: center;
+			padding: 30px;
+			font-size: 35px;
+    		line-height: 76px;
+		}
 		.featuredSongsCaption{
 			background-color: #FA84C0;
 			width: 100%;
-			height: 17em;
+			height: 20em;
 			position: relative;
 			overflow: hidden;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center top;
 			.dImg{
 				position: absolute;
 				left: 14px;
@@ -284,7 +355,7 @@ header{
 		.featuredSongsLists{
 			.song{
 				width: 100%;
-				height: 8em;
+				height: 10em;
 				display: block;
 				text-decoration: none;
 				background-repeat: no-repeat;
@@ -379,37 +450,128 @@ header{
 	}
 	.ratingContentsSections{
 		width: 100%;
-		min-height: 50em;
+		min-height: 70em;
 		position: relative;
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
-		margin-top: -30px;
+		// margin-top: -30px;
 		.songList{
-			background-color: rgba(21, 181, 236, 0.5);
-			height: 35em;
-		}
-		.captionWrap{
-			.caption{
-				width: 100%;
-				height: 15em;
-				background-color: #3C92CC;
-				position: relative;
-				.capImg{
-					position: absolute;
-					top: 40px;
-					img{
-						width: 8em;
+			background-color: rgba(225, 225, 225, 0.7);
+			min-height: 35em;
+			.title{
+				padding: 10px 20px;
+				font-size: 35px;
+				color: #000;
+			}
+			.songTable{
+				table{
+					width: 100%;
+					border-collapse: collapse;
+					tr{
+						td{
+							margin-bottom: 10px;
+							vertical-align: top;
+							.number{
+								width: 29px;
+							    text-align: center;
+							    background: #000;
+							    font-size: 20px;
+							    color: #fff;
+							    padding: 5px;
+							    margin-bottom: 10px;
+							}
+							.coverImage{
+								width: 70px;
+								min-height: 70px;
+								position: relative;
+								background-position: center;
+								background-size: cover;
+								background-repeat: no-repeat;
+								margin-bottom: 10px;
+							}
+							.songSec{
+								margin-bottom: 10px;
+								.songTitle{
+									font-weight: 600;
+    								font-size: 16px;
+								}
+								.art{
+									font-size: 13px;
+								}
+								.media{
+									height: 37px;
+									// border: 1px solid;
+									margin-top: 0;
+								}
+							}
+							.social{
+								margin-bottom: 10px;
+								ul{
+									margin: 0;
+									padding: 0;
+									li{
+										vertical-align: middle;
+										display: inline-block;
+										a{
+											display: inline-block;
+											text-decoration: none;
+											&.vote{
+												background-color: red;
+											    color: #fff;
+											    margin-left: 10px;
+											    padding: 2px 10px;
+											    border-radius: 3px;
+											    margin-right: 5px;
+												margin-top: 38px;					
+											}
+											&.facebook{
+												color: #3A5A98;
+												margin-top: 41px;
+    											margin-right: 5px;
+											}
+											&.twitter{
+												color: #2DAAE2;
+												margin-top: 41px;
+    											margin-right: 5px;
+											}
+										}
+									}
+								}
+							}
+						}
 					}
 				}
 			}
-			.text{
-				position: absolute;
-			    font-size: 24px;
-			    font-weight: 600;
-			    color: #fff;
-			    top: 43px;
+		}
+		.captionWrap{
+			background-color: rgba(225, 225, 225, 0.9);
+			min-height: 35em;
+			.title{
+				padding: 10px 30px;
+				font-size: 35px;
+				color: #000;
+			}
+			.newswrap{
+				padding: 20px;
+				.news{
+					.img{
+						width: 100%;
+						height: 190px;
+						position: relative;
+						background-position: center;
+						background-size: cover;
+						background-repeat: no-repeat;
+					}	
+					.title{
+						font-size: 20px;
+					    text-align: left;
+					    padding: 0;
+					    margin-bottom: 5px;
+					}
+					.info{}
+				}
 			}
 		}
 	}
@@ -417,96 +579,45 @@ header{
 
 .uploadPage{
 	width: 100%;
-	height: 60em;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	.overlay{
-		position: absolute;
-		background: rgba(21, 181, 236, 0.9);
-		top: 0;
-		left:0;
-		right: 0;
-		bottom: 0;
-		padding: 10px;
-		.songInfoBtn{
-			display: none;
-		}
-		.formSec{
-			width: 74em;
-		    height: 54em;
-		    background-color: #fff;
-		    position: absolute;
-		    top: -17px;
-		    left: -322px;
-		    border-radius: 34em;
-		    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
-		    padding: 10px;
-		    .dForm{
-		    	width: 30em;
-			    height: 36em;
-			    background: #15b5ec;
-			    margin-left: 29em;
-			    margin-top: 6em;
-			    padding: 30px;
-			    .title{
-			    	color: #fff;
-				    font-weight: 600;
-				    line-height: 25px;
-				    font-size: 20px;
-			    }
-			    .caption{
-			    	color: #fff;
-    				font-size: 12px;
-    				margin-bottom: 20px;
-			    }
-			    input, select, textarea{
-			    	margin-bottom: 20px;
-			    	width: 100%;
-			    	border: 2px solid #000;
-			    	height: 3.5em;
-			    	padding: 10px;
-			    	background-color: transparent;
-			    }
-			    .artistInfoBtn{
-			    	background-color: #E15570;
-				    color: #fff;
-				    display: inline-block;
-				    padding: 10px 35px;
-				    border-radius: 3px;
-				    cursor: pointer;
-
-			    }
-		    }
-		}
-		.infoSec{
-			position: relative;
-			margin-top: 7em;
-		    border: 4px solid #fff;
-		    width: 100px;
-		    height: 100px;
-		    border-radius: 50%;
-		    overflow: hidden;
-		    background-repeat: no-repeat;
-			background-size: cover;
-			background-position: center;
-			margin-left: 5em;
-			img.icon{
-
+	.formSec{
+		padding: 50px 0;
+		.musicForm{
+			.form-group{
+				position: relative;
+				label{}
+				input, select, textarea{
+					box-shadow: none;
+					outline: none;
+					border-radius: 0;
+					background-color: #D4D2D4;
+					height: 3em;
+				}
+				textarea{
+					height: 7em;
+				}
+				input.terms{
+					position: absolute;
+    				top: -8px;
+				}
+				.subBtn{
+					padding: 10px 80px;
+				}
 			}
 		}
-		.text{
-			color: #fff;
-			font-weight: 600;
-		    font-size: 72px;
-		    line-height: 74px;
-		    color: #fff;
-		    margin-left: 1.2em;
-		    margin-top: 16px;
-		    text-transform: uppercase;
+	}
+	.adsSec{
+		padding: 50px 50px;
+		.ads{
+			width: 100%;
+			height: auto;
+			box-shadow: rgba(0,0,0,.2) 0 0 0 0, rgba(0,0,0,.188235) 0 1px 10px 0;
+			margin-bottom: 30px;
+			img{
+				width: 100%;
+				height: auto;
+			}
 		}
 	}
-
 }
 footer{
 	position: relative;
@@ -535,3 +646,6 @@ footer{
 	}
 }
 
+.mb-20{
+	margin-bottom: 20px;
+}
