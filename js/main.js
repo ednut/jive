@@ -1,18 +1,9 @@
-// $(".skewSection.withBanner").backstretch([
-// 	  "img/MusicWallpaperArtWallpapersPicshd.jpg",
-//   ], {duration: 3000, fade: 750});
-
-
-$('.artistInfoBtn').click(function(){
-	$('.artistInfo').fadeOut();
-	$('.artistInfo').hide();
-	$('.songInfo').fadeIn();
-	$('.songInfo').show();
-})
-
-$('.songInfoBtn').click(function(){
-	$('.artistInfo').fadeIn();
-	$('.artistInfo').show();
-	$('.songInfo').fadeOut();
-	$('.songInfo').hide();
-})
+$('.player_audio').click(function() {
+  if (this.paused == false) {
+      this.pause();
+      alert('music paused');
+  } else {
+      this.play();
+      alert('music playing');
+  }
+});

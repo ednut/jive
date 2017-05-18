@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="css/general.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
-    <body ng-app="myApp">
+    <body>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -42,6 +42,7 @@
                             <li><a href="index.html"> Home </a></li>
                             <li><a href="upload.html"> Upload </a></li>
                             <li><a href="ranking.html"> Ranking </a></li>
+                            <li><a href="prizes.html"> Prizes </a></li>
                             <li><a href="faq.html"> FAQ </a></li>
                             <li class="search">
                                 <div class="searchWrap clearfix">
@@ -88,7 +89,7 @@
                 </div>
                 <div class="col-md-9 mb-10 col-sm-12 col-xs-12 p-0">
                     <div class="featuredSongsLists">
-                        <a href="">
+                        <a href="javascript:void(0)">
                             <div class="col-md-2 col-sm-4 col-xs-6 p-0">
                                 <div class="song">
                                     <img src="img/a.jpg" alt="">
@@ -98,7 +99,11 @@
                                             <div class="by">by Prince</div>
                                         </div>
                                         <div class="playSection">
-                                            <i class="fa fa-play" aria-hidden="true"></i>
+                                            <audio class="player_audio" preload='none'>
+                                                <source src='music/AsaBabyGone.mp3' type='audio/wav' />
+                                            </audio>
+                                           
+                                           <span class="player_audio"><i id="stateicon" class="fa fa-play"></i></span>
                                         </div>
                                         <div class="voteSection clearfix">
                                             <span class="vote">Vote</span>
@@ -675,7 +680,6 @@
                 </div>
             </div>
         </div>
-
         <div class="cleafix"></div>
         <footer>
             <div class="container">
@@ -712,8 +716,6 @@
 
 
         <script src="js/vendor/jquery-1.12.0.min.js"></script>
-        <script src="js/angular.min.js"></script>
-        <script src="js/generalController.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="css/bootstrap/js/bootstrap.min.js"></script>
