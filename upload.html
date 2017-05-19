@@ -56,8 +56,7 @@
         </header>
 
         <div class="uploadPage clearfix container">
-           <div class="col-md-1"></div>
-           <div class="col-md-6">
+           <div class="col-md-8">
                <div class="formSec">
                    <form class="form-horizontal musicForm">
 
@@ -84,8 +83,16 @@
 
                       <div class="form-group">
                         <label class="col-sm-2 control-label">Album Art</label>
-                        <div class="col-sm-10">
-                            <input type="file" class="form-control">
+                        <div class="col-sm-6">
+                            <div class="coverImgeWrap">
+                              <img id="blah" src="img/coverImg.png" alt="your image" />
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="fileWrap">
+                              Upload Album Art
+                              <input type="file" class="form-control imgInp">
+                            </div>
                         </div>
                       </div>
 
@@ -118,6 +125,20 @@
                       </div>
 
                       <div class="form-group">
+                        <label class="col-sm-2 control-label">Upload Song</label>
+                        <div class="col-sm-7">
+                          <input id="uploadFile" class="form-control mb-20" placeholder="Choose File" disabled="disabled" />
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="fileUpload btn btn-primary">
+                              <span>Upload</span>
+                              <input id="uploadBtn" type="file" class="upload" />
+                          </div>  
+                        </div>
+                                             
+                     </div>
+
+                      <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
                           <div class="checkbox">
                             <label>
@@ -134,13 +155,11 @@
                     </form>
                </div>
            </div>
-           <div class="col-md-1"></div>
            <div class="col-md-4">
                <div class="adsSec">
                    <div class="ads">
                        <img src="img/mtn1.png" alt="">
-                   </div>
-                   <div class="ads">
+                   </div`                   <div class="ads">
                        <img src="img/add1.png" alt="">
                    </div>
                </div>
