@@ -119,13 +119,13 @@ header{
 	.mainBanner{
 		position: relative;
 		width: 100%;
-		height: 50em;
+		height: 40em;
 		.coverBannerImg{
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
 			width: 100%;
-			height: 50em;
+			height: 40em;
 			position: relative;
 			.captionImg{
 				position: absolute;
@@ -536,8 +536,15 @@ header{
 								}
 								.media{
 									height: 37px;
-									// border: 1px solid;
+									position: relative;
 									margin-top: 0;
+									i{
+										display: inline-block;
+									    margin-top: 0px;
+									    position: absolute;
+									    top: 7px;
+									    color: #B81D25;
+									}
 								}
 							}
 							.social{
@@ -615,8 +622,9 @@ header{
 	min-height: 35em;
 	.title{
 		padding: 10px 20px;
-		font-size: 35px;
+		font-size: 25px;
 		color: #000;
+		margin-bottom: 20px;
 	}
 	.songTable{
 		table{
@@ -634,10 +642,11 @@ header{
 					    color: #fff;
 					    padding: 5px;
 					    margin-bottom: 10px;
+					    display: none;
 					}
 					.coverImage{
-						width: 70px;
-						min-height: 70px;
+						width: 50px;
+						min-height: 50px;
 						position: relative;
 						background-position: center;
 						background-size: cover;
@@ -648,48 +657,21 @@ header{
 						margin-bottom: 10px;
 						.songTitle{
 							font-weight: 600;
-							font-size: 16px;
+							font-size: 14px;
 						}
 						.art{
-							font-size: 13px;
+							font-size: 12px;
 						}
 						.media{
-							height: 37px;
-							// border: 1px solid;
+							height: 25px;
+							position: relative;
 							margin-top: 0;
-						}
-					}
-					.social{
-						margin-bottom: 10px;
-						ul{
-							margin: 0;
-							padding: 0;
-							li{
-								vertical-align: middle;
+							i{
 								display: inline-block;
-								a{
-									display: inline-block;
-									text-decoration: none;
-									&.vote{
-										background-color: red;
-									    color: #fff;
-									    margin-left: 10px;
-									    padding: 2px 10px;
-									    border-radius: 3px;
-									    margin-right: 5px;
-										margin-top: 38px;					
-									}
-									&.facebook{
-										color: #3A5A98;
-										margin-top: 41px;
-										margin-right: 5px;
-									}
-									&.twitter{
-										color: #2DAAE2;
-										margin-top: 41px;
-										margin-right: 5px;
-									}
-								}
+							    margin-top: 0px;
+							    position: absolute;
+							    top: 7px;
+							    color: #B81D25;
 							}
 						}
 					}
@@ -1023,7 +1005,7 @@ header{
 	    }
 	    button{
 	    	float: right;
-	    	width: 12%;		
+	    	width: 14%;		
 	    	border-radius: 2px;	
 	    	background-image: -ms-linear-gradient(top, #E80000 0%, #8D0708 100%);
 			background-image: -moz-linear-gradient(top, #E80000 0%, #8D0708 100%);
@@ -1034,6 +1016,7 @@ header{
 			border: none;
 			color: #fff;
 			padding: 7px 0;
+			font-size: 13px;
 			i{
 				color: #555;
 			}
@@ -1046,7 +1029,7 @@ header{
 				display: inline-block;
 				color: #fff;
 			    font-weight: 600;
-			    margin-left: 25px;
+			    margin-right: 25px;
 				input{
 
 				}
@@ -1090,4 +1073,30 @@ footer{
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: #999;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+progress {
+	background: #B81D25;
+	height: 3px;
+	margin-left: 25px;
+}
+progress::-webkit-progress-bar {
+	background: #B81D25;
+	height: 3px;
+	margin-left: 25px;
+}
+progress::-webkit-progress-value {
+	background: #B81D25;
+	height: 3px;
+	margin-left: 25px;
+} 
+progress::-moz-progress-bar {
+	background: #B81D25;
+	height: 3px;
+	margin-left: 25px;
 }

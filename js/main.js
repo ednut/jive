@@ -31,6 +31,33 @@ $('.player1').on('timeupdate', function() {
     $('.seekbar1').attr("value", this.currentTime / this.duration);
 });
 
+// ####################################################################
+
+$('.play2').on('click', function() {
+    document.querySelector('.player2').play();
+    $('.play2').hide();
+    $('.pause2').show();
+});
+
+$('.pause2').on('click', function() {
+    document.querySelector('.player2').pause();
+    $('.pause2').hide();
+    $('.play2').show();
+});
+$('.player2').on('timeupdate', function() {
+    $('.seekbar2').attr("value", this.currentTime / this.duration);
+});
+
+// ####################################################################
+
+
+
+
+
+
+
+
+
 function readURL(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
